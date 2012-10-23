@@ -37,8 +37,8 @@
     CGFloat height = self.frame.size.height;
     CGFloat width = self.frame.size.width;
     
-    activityIndicator.center = CGPointMake(width * 0.5, height - 100);
-    loadingLbl.center = CGPointMake(width * 0.5, activityIndicator.frame.origin.y - loadingLbl.frame.size.height - 20);
+    activityIndicator.center = CGPointMake(width * 0.5, height - 40);
+    loadingLbl.center = CGPointMake(width * 0.5, activityIndicator.frame.origin.y - loadingLbl.frame.size.height);
 }
 
 @end
