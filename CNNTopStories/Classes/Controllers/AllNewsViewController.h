@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "XMLParser.h"
+#import "AllNewsView.h"
 
 @class LoadingView;
 
 
-@interface AllNewsViewController : UIViewController <XMLParserDelegate>
+@interface AllNewsViewController : UIViewController <XMLParserDelegate, AllNewsViewDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     XMLParser *parser;
     LoadingView *loadingView;
-    
+    AllNewsView *allNewsView;
 }
 
 @end

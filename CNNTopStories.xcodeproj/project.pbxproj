@@ -22,6 +22,7 @@
 		588165EC1636249500187816 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 588165EB1636249500187816 /* XMLParser.m */; };
 		588165EF1636261E00187816 /* loadingBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588165EE1636261E00187816 /* loadingBackground.jpg */; };
 		588165F216362C0800187816 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 588165F116362C0800187816 /* News.m */; };
+		588A61991637874F0090E1F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A61981637874F0090E1F5 /* NewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		588165EE1636261E00187816 /* loadingBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loadingBackground.jpg; sourceTree = "<group>"; };
 		588165F016362C0800187816 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		588165F116362C0800187816 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		588A61971637874F0090E1F5 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		588A61981637874F0090E1F5 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 			children = (
 				588165DD1636243700187816 /* AllNewsViewController.h */,
 				588165DE1636243700187816 /* AllNewsViewController.m */,
+				588A61971637874F0090E1F5 /* NewsViewController.h */,
+				588A61981637874F0090E1F5 /* NewsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				588165E51636245300187816 /* LoadingView.m in Sources */,
 				588165EC1636249500187816 /* XMLParser.m in Sources */,
 				588165F216362C0800187816 /* News.m in Sources */,
+				588A61991637874F0090E1F5 /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +356,7 @@
 				588165D91636239F00187816 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

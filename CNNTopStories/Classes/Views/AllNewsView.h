@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AllNewsViewDelegate <NSObject>
+
+- (void)reloadPressed;
+
+@end
+
 @interface AllNewsView : UIView
+{
+    UILabel *headerLbl;
+}
+
+- (void)reload;
+- (void)setTitle:(NSString*)title;
+
+@property (weak, nonatomic) id<AllNewsViewDelegate> delegate;
+@property (strong, nonatomic) UITableView *newsTableView;
+
 
 @end
