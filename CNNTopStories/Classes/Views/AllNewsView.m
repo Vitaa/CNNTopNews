@@ -24,6 +24,7 @@
         headerLbl = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, 60.0)];
         headerLbl.font = [UIFont systemFontOfSize:40];
         headerLbl.textAlignment = NSTextAlignmentCenter;
+        headerLbl.adjustsFontSizeToFitWidth = YES;
         _newsTableView.tableHeaderView = headerLbl;
         
         UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -41,7 +42,6 @@
     [super layoutSubviews];
     
     self.newsTableView.frame = self.bounds;
- //   headerLbl.frame = CGRectMake(0.0, 0.0, self.frame.size.width, 60.0);
 }
 
 - (void)reload {

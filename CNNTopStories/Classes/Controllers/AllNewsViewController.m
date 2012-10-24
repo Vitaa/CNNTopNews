@@ -7,9 +7,12 @@
 //
 
 #import "AllNewsViewController.h"
+#import "NewsViewController.h"
 #import "LoadingView.h"
 #import "XMLParser.h"
 #import "News.h"
+
+static NSString *kNewsUrl = @"http://rss.cnn.com/rss/cnn_topstories.rss";
 
 @interface AllNewsViewController ()
 @property (strong, nonatomic) NSArray *news;
@@ -31,8 +34,6 @@
 {
     [super viewDidLoad];
     
-    self.navigationController.navigationBarHidden = YES;
-    
     allNewsView = [[AllNewsView alloc] initWithFrame:self.view.bounds];
     allNewsView.delegate = self;
     allNewsView.newsTableView.dataSource = self;
@@ -45,16 +46,26 @@
     [NSThread detachNewThreadSelector:@selector(loadNews) toTarget:self withObject:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
 - (void)loadNews {
     @autoreleasepool {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-        [parser parseNews:[NSURL URLWithString:@"http://rss.cnn.com/rss/cnn_topstories.rss"]];
+        [parser parseNews:[NSURL URLWithString:kNewsUrl]];
     }
 }
 
@@ -110,7 +121,11 @@
 #pragma UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    News *news = [self.news objectAtIndex:indexPath.row];
+    NewsViewController *newsViewController = [[NewsViewController alloc] initWithNews:news];
+    [self.navigationController pushViewController:newsViewController animated:YES];
 }
 
 #pragma mark -

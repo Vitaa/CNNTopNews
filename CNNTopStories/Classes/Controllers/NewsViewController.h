@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class News;
+
 @interface NewsViewController : UIViewController
+
+- (id)initWithNews:(News*)news;
 
 @end
