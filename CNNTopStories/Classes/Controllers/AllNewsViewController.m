@@ -87,7 +87,7 @@ static NSString *kNewsUrl = @"http://rss.cnn.com/rss/cnn_topstories.rss";
     
     NSLog(@"%@", error);
     
-    [[[UIAlertView alloc] initWithTitle:@"Error!" message:@"Couldn't load news.." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Couldn't load news!" message:@"Please check your internet connection" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
 }
 
 #pragma mark -
