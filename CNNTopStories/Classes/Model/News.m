@@ -19,7 +19,7 @@
    
     [formatter setLocale:[NSLocale currentLocale]];
     [formatter setTimeZone:[NSTimeZone systemTimeZone]];
-    [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss"];
+    [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss zzz"];
     _publishDate = [formatter stringFromDate:sourceDate];
 }
 

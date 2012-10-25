@@ -47,7 +47,6 @@
 
 #pragma mark -
 #pragma NSXMLParser delegate
-
 - (void)parserDidStartDocument:(NSXMLParser *)parser {
     self.news = [[NSMutableArray alloc] init];
     self.newsTitle = @"";

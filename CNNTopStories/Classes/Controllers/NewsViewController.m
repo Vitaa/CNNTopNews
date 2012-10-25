@@ -8,6 +8,7 @@
 
 #import "NewsViewController.h"
 #import "News.h"
+
 @interface NewsViewController ()
 @property (strong, nonatomic) News* news;
 @end

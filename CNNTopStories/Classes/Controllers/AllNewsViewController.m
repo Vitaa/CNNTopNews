@@ -92,7 +92,6 @@ static NSString *kNewsUrl = @"http://rss.cnn.com/rss/cnn_topstories.rss";
 
 #pragma mark -
 #pragma UITableViewDataSource
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.news count];
 }
@@ -119,7 +118,6 @@ static NSString *kNewsUrl = @"http://rss.cnn.com/rss/cnn_topstories.rss";
 
 #pragma mark -
 #pragma UITableViewDelegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -130,7 +128,6 @@ static NSString *kNewsUrl = @"http://rss.cnn.com/rss/cnn_topstories.rss";
 
 #pragma mark -
 #pragma AllNewsViewDelegate
-
 - (void)reloadPressed {
     [NSThread detachNewThreadSelector:@selector(loadNews) toTarget:self withObject:nil];
 }
