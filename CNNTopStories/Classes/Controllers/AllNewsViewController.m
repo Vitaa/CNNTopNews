@@ -109,12 +109,11 @@ static NSString *kNewsUrl = @"http://rss.cnn.com/rss/cnn_topstories.rss";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     News *news = [self.news objectAtIndex:indexPath.row];
-    cell.textLabel.text = news.title;
+    cell.textLabel.text = [news.title stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     cell.detailTextLabel.text = news.publishDate;
     
     return cell;
 }
-
 
 #pragma mark -
 #pragma UITableViewDelegate
